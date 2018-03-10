@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1290.0" style="-fx-background-color: #070f1a;" styleClass="greenColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busterbox.FXMLDocumentController">
+   <top>
+      <VBox fx:id="vboxtopMainContainer" prefHeight="140.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="titleBar" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-border-color: #293f3C;">
+               <left>
+                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="105.0" text="BusterBox" textFill="#a1a1a1" BorderPane.alignment="CENTER">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#727272" spread="0.2" />
+                     </effect>
+                  </Label>
+               </left>
+               <right>
+                  <HBox prefHeight="31.0" prefWidth="111.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="closeButton" contentDisplay="GRAPHIC_ONLY" onAction="#close" style="-fx-background-radius: 2000;" text=" ">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Filled_Circle_20px_1.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="#727272" spread="0.2" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#min" prefHeight="31.0" prefWidth="28.0" style="-fx-background-radius: 2000;" text=" ">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Filled_Circle_20px_2.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="#727272" spread="0.2" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#max" style="-fx-background-radius: 2000;" text=" ">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Filled_Circle_20px_4.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow color="#727272" spread="0.2" />
+                                 </effect>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </right>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </BorderPane>
+            <VBox fx:id="TopMenuVbox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="200.0">
+                     <left>
+                        <FlowPane alignment="CENTER" prefHeight="80.0" prefWidth="95.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="70.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resources/Logomakr_9uYqsn.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </FlowPane>
+                     </left>
+                     <right>
+                        <FlowPane alignment="CENTER" prefHeight="33.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField prefHeight="33.0" prefWidth="229.0" promptText="enter here.." style="-fx-text-inner-color: #ffffff; -fx-background-color: #070f1a; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #3a3f4e; -fx-text-fill: green;" />
+                              <JFXButton prefHeight="31.0" prefWidth="78.0" ripplerFill="WHITE" style="-fx-background-radius: 200; -fx-background-color: #2acb41;" styleClass="greenColor" text="SEARCH" textFill="WHITE" />
+                           </children>
+                        </FlowPane>
+                     </right>
+                  </BorderPane>
+                  <BorderPane prefHeight="30.0" prefWidth="200.0">
+                     <left>
+                        <FlowPane prefHeight="87.0" prefWidth="389.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton ripplerFill="#2acb41" text="Home" textFill="#2acb41">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton ripplerFill="#2acb41" text="KIDs" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton ripplerFill="#2acb41" text="Movies" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton ripplerFill="#2acb41" text="Shows" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton ripplerFill="#2acb41" text="Trending" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </FlowPane>
+                     </left>
+                     <right>
+                        <JFXButton onAction="#logout" prefHeight="20.0" ripplerFill="#2acb41" text="Logout" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <effect>
+                              <DropShadow color="#727272" spread="0.2" />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </right>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane fx:id="contentPane" hvalue="1.0" pannable="true" prefHeight="200.0" style="-fx-background-color: #070f1a;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="bpcspvb" prefHeight="2082.0" style="-fx-background-color: #070f1a;">
+               <children>
+                  <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="880.0" prefWidth="1278.0" style="-fx-background-color: #070f1a;">
+                     <left>
+                        <JFXButton fx:id="blbpvbsp" contentDisplay="GRAPHIC_ONLY" onAction="#previousMovieOnOurSpecialMovies" prefHeight="940.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Chevron_Left_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </left>
+                     <right>
+                        <JFXButton fx:id="blbpvbsp1" contentDisplay="GRAPHIC_ONLY" prefHeight="940.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Chevron_Right_50px_3.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </right>
+                     <center>
+                        <AnchorPane prefHeight="738.0" prefWidth="1478.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="imgmain" fitHeight="768.0" fitWidth="1200.0" layoutX="278.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/VIKAS/Documents/NetBeansProjects/BusterBox/src/Resources/28.jpg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Label layoutX="1195.0" layoutY="540.0" prefHeight="55.0" prefWidth="150.0" text="MOVIES" textFill="#2acb41">
+                                 <font>
+                                    <Font size="38.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="960.0" layoutY="540.0" prefHeight="55.0" prefWidth="239.0" text="OUR SPECIAL" textFill="WHITE">
+                                 <font>
+                                    <Font size="38.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="880.0" prefWidth="1278.0">
+                     <top>
+                        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Region prefHeight="100.0" prefWidth="10.0" style="-fx-background-color: #2acb41;" />
+                              <VBox prefHeight="150.0" prefWidth="1720.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="100.0" prefWidth="500.0" text="Movies category" textFill="WHITE">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Region prefHeight="35.0" prefWidth="85.0" />
+                                          <Label prefHeight="50.0" prefWidth="500.0" text="Select the category you want to watch today." textFill="WHITE" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
