@@ -12,7 +12,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1290.0" style="-fx-background-color: #070f1a;" styleClass="greenColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busterbox.FXMLDocumentController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1920.0" style="-fx-background-color: #070f1a;" styleClass="greenColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busterbox.FXMLDocumentController">
    <top>
       <VBox fx:id="vboxtopMainContainer" prefHeight="140.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -28,13 +28,13 @@
                   </Label>
                </left>
                <right>
-                  <HBox prefHeight="31.0" prefWidth="111.0" BorderPane.alignment="CENTER">
+                  <HBox prefHeight="31.0" prefWidth="123.0" BorderPane.alignment="CENTER">
                      <children>
                         <JFXButton fx:id="closeButton" contentDisplay="GRAPHIC_ONLY" onAction="#close" style="-fx-background-radius: 2000;" text=" ">
                            <graphic>
                               <ImageView>
                                  <image>
-                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Filled_Circle_20px_1.png" />
+                                    <Image url="file:/C:/Users/VIKAS/Documents/NetBeansProjects/BusterBox/src/Resources/icons8_Filled_Circle_20px_1.png" />
                                  </image>
                                  <effect>
                                     <DropShadow color="#727272" spread="0.2" />
@@ -52,7 +52,7 @@
                            <graphic>
                               <ImageView>
                                  <image>
-                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Filled_Circle_20px_2.png" />
+                                    <Image url="file:/C:/Users/VIKAS/Documents/NetBeansProjects/BusterBox/src/Resources/icons8_Filled_Circle_20px_2.png" />
                                  </image>
                                  <effect>
                                     <DropShadow color="#727272" spread="0.2" />
@@ -67,7 +67,7 @@
                            <graphic>
                               <ImageView>
                                  <image>
-                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Filled_Circle_20px_4.png" />
+                                    <Image url="@../Resources/icons8_Filled_Circle_20px_4.png" />
                                  </image>
                                  <effect>
                                     <DropShadow color="#727272" spread="0.2" />
@@ -165,20 +165,20 @@
                      <left>
                         <JFXButton fx:id="blbpvbsp" contentDisplay="GRAPHIC_ONLY" onAction="#previousMovieOnOurSpecialMovies" prefHeight="940.0" prefWidth="125.0" BorderPane.alignment="CENTER">
                            <graphic>
-                              <ImageView>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Chevron_Left_50px.png" />
+                                    <Image url="@../Resources/icons8_Back_50px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </JFXButton>
                      </left>
                      <right>
-                        <JFXButton fx:id="blbpvbsp1" contentDisplay="GRAPHIC_ONLY" prefHeight="940.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+                        <JFXButton fx:id="specialNextMovieB" contentDisplay="GRAPHIC_ONLY" onAction="#specialNextMovieB" prefHeight="940.0" prefWidth="125.0" BorderPane.alignment="CENTER">
                            <graphic>
-                              <ImageView>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="file:/C:/Users/VIKAS/AppData/Local/Temp/icons8_Chevron_Right_50px_3.png" />
+                                    <Image url="@../Resources/icons8_Forward_50px.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -232,6 +232,111 @@
                            </children>
                         </HBox>
                      </top>
+                     <center>
+                        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                              <GridPane prefHeight="285.0" prefWidth="1720.0">
+                                 <children>
+                                    <JFXRadioButton />
+                                    <JFXRadioButton GridPane.columnIndex="1" />
+                                    <JFXRadioButton GridPane.rowIndex="1" />
+                                    <JFXRadioButton GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <JFXRadioButton GridPane.rowIndex="2" />
+                                    <JFXRadioButton GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="880.0" prefWidth="1278.0">
+                     <top>
+                        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Region prefHeight="100.0" prefWidth="10.0" style="-fx-background-color: #2acb41;" />
+                              <VBox prefHeight="150.0" prefWidth="1720.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="100.0" prefWidth="500.0" text="Available Movies" textFill="WHITE">
+                                       <font>
+                                          <Font size="50.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Region prefHeight="35.0" prefWidth="85.0" />
+                                          <Label prefHeight="50.0" prefWidth="500.0" text="Movies On Disk" textFill="WHITE" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </top>
+                     <left>
+                        <JFXButton fx:id="AvailableMoviesPreviousB" contentDisplay="GRAPHIC_ONLY" onAction="#previousMovieOnOurSpecialMovies" prefHeight="940.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resources/icons8_Back_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </left>
+                     <right>
+                        <JFXButton fx:id="AvailableMoviesNextB" contentDisplay="GRAPHIC_ONLY" onAction="#specialNextMovieB" prefHeight="940.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Resources/icons8_Forward_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </right>
+                     <center>
+                        <AnchorPane prefHeight="738.0" prefWidth="1478.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="imgmain1" fitHeight="768.0" fitWidth="1200.0" layoutX="278.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/VIKAS/Documents/NetBeansProjects/BusterBox/src/Resources/28.jpg" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Label layoutX="1195.0" layoutY="540.0" prefHeight="55.0" prefWidth="150.0" text="MOVIES" textFill="#2acb41">
+                                 <font>
+                                    <Font size="38.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="960.0" layoutY="540.0" prefHeight="55.0" prefWidth="239.0" text="OUR SPECIAL" textFill="WHITE">
+                                 <font>
+                                    <Font size="38.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton contentDisplay="CENTER" layoutX="278.0" layoutY="42.0" onAction="#AvailableMoviesPlayFunction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 100;">
+                                 <graphic>
+                                    <ImageView fx:id="AvailableMoviesPlayB" fitHeight="84.0" fitWidth="91.0">
+                                       <image>
+                                          <Image url="@../Resources/icons8_Play_100px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </center>
                   </BorderPane>
                </children>
             </VBox>

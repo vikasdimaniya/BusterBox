@@ -3,27 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package busterbox;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-
+import java.lang.*;
 import com.jfoenix.controls.JFXButton;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -31,15 +39,17 @@ import javafx.util.Duration;
  * @author VIKAS
  */
 public class FXMLDocumentController implements Initializable {
+    int firstTime=0,TotalMoviesMovie=0;
+    String[] MoviePaths;
     @FXML
-    private  BorderPane titleBar,spbp;
+    private  BorderPane titleBar;
     private ScrollPane contentPane;
     @FXML
     private VBox bpcspvb,TopMenuVbox,vboxtopMainContainer;
     private Double xOffset,yOffset;
     TranslateTransition t=new TranslateTransition();
     TranslateTransition contentPaneTranslation=new TranslateTransition();
-    JFXButton blbpvbsp,brbpvbsp;
+    JFXButton blbpvbsp,brbpvbsp,specialNextMovieB;
     @FXML
     private ImageView imgmain;
     private TranslateTransition TopMenuVboxTranslate=new TranslateTransition();
@@ -47,7 +57,7 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         
-        
+        MoviePaths=AvailableMoviesFinder.find("F:\\F\\Entertainment\\Movies");
         /**/
         contentPaneTranslation.setDuration(Duration.millis(150));
         contentPaneTranslation.setNode(contentPane);
@@ -87,22 +97,21 @@ public class FXMLDocumentController implements Initializable {
         //imgmain.setLayoutX(width-imgmain.getFitWidth()+2*blbpvbsp.getWidth());
         vboxtopMainContainer.addEventHandler(MouseEvent.MOUSE_ENTERED,
         new EventHandler<MouseEvent>() {
-          @Override
-          public void handle(MouseEvent e) {
-              contentPaneDown();
-              menuDisplay();
+            @Override
+            public void handle(MouseEvent e) {
+                contentPaneDown();
+                menuDisplay();
            
-          }
+            }
         });
         TopMenuVbox.addEventHandler(MouseEvent.MOUSE_EXITED,
         new EventHandler<MouseEvent>() {
-          @Override
-          public void handle(MouseEvent e) {
-              contentPaneUp();
-              menuHide();
-           
-          }
-        });
+            @Override
+            public void handle(MouseEvent e) {
+                contentPaneUp();
+                menuHide();
+            }
+        });   
     }
     @FXML
     void close(ActionEvent event) {
@@ -121,8 +130,18 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    void logout(ActionEvent event) {
-        
+    void logout(ActionEvent event) throws IOException {
+        //Stage MainStage
+        /*
+        Stage stage1=BusterBox.getStage();
+        stage1.close();
+        Stage stage=new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Scene HomePage = new Scene(root);
+        stage.setScene(HomePage);
+        stage.show();
+        */
+        System.exit(0);
     }
      @FXML
     void previousMovieOnOurSpecialMovies(ActionEvent event) {
@@ -135,9 +154,7 @@ public class FXMLDocumentController implements Initializable {
     }
     void contentPaneUp(){
         contentPaneTranslation.setToY(-110);
-        System.err.println("whatecet");
         contentPaneTranslation.play();  
-        //System.err.println(contentPane.getHvalue());
     }
     void menuDisplay(){
         TopMenuVboxTranslate.setToY(0);
@@ -149,31 +166,30 @@ public class FXMLDocumentController implements Initializable {
         TopMenuVboxTranslate.play();
         
     }
-    /*@FXML
-    void TopMenuVboxTranslateEnter(ActionEvent event) {
-        menuDisplay();
+    private int specialNextMovieCounter=1;
+    @FXML
+    void specialNextMovieB(ActionEvent event) {
+        System.out.println("nextMovieImage");
+        imgmain.setImage(new Image("file:/F:\\F\\Entertainment\\wallpapers\\"+(specialNextMovieCounter++)+".jpg"));
     }
     @FXML
-    void TopMenuVboxTranslateExit(ActionEvent event) {
-        menuHide();
-    }*/
-    
+    void AvailableMoviesPlayFunction(ActionEvent event) {
+        System.out.println("PlayMovie");
+        System.out.println("1");
+        Scanner s=new Scanner(System.in);
+        System.out.println("2");
+        for (int i = 0; i< MoviePaths.length; i++) {
+            if(MoviePaths[i]==null){
+                TotalMoviesMovie=i;
+                break;
+            }
+            System.out.println(i+": "+MoviePaths[i]);
+        }
+        System.out.print("Enter the index of the movie: ");
+        int movieIndex=s.nextInt();
+        System.out.println("The movie is:::::::::::::::::::::::"+MoviePaths[movieIndex]);
+        String MoviePath="\""+MoviePaths[movieIndex]+"\"";
+        System.out.println(MoviePaths[movieIndex]+"              yes          "+MoviePath);
+        LaunchingExternalApps.runMedia(MoviePath);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
