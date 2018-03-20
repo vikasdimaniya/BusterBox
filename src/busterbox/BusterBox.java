@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package busterbox;
 
 import javafx.application.Application;
@@ -21,13 +22,14 @@ public class BusterBox extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.initStyle(StageStyle.TRANSPARENT);
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("doc.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(root);
         primaryStage=stage;
         stage.setScene(scene);
         stage.show();
     }
+
     public static Stage getStage(){
         return primaryStage;
     }
@@ -37,5 +39,5 @@ public class BusterBox extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

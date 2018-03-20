@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #070f1a;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="busterbox.LoginController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" text="Who's watching BusterBox?" textFill="WHITE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="HomeSceneButton" contentDisplay="TOP" layoutX="286.0" layoutY="292.0" onAction="#loginButton" prefHeight="160.0" prefWidth="160.0" ripplerFill="#2acb41" text="vikas" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="166.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/user1.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" layoutX="687.0" layoutY="303.0" text="add" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="160.0" fitWidth="160.0">
+                     <image>
+                        <Image url="@../../../../../AppData/Local/Temp/icons8_Add_New_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <BorderPane fx:id="titleBar" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <right>
+            <HBox prefHeight="31.0" prefWidth="111.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="closeButton" contentDisplay="GRAPHIC_ONLY" onAction="#close" style="-fx-background-radius: 2000;" text=" ">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <graphic>
+                        <ImageView>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <DropShadow color="#727272" spread="0.2" />
+                           </effect>
+                           <image>
+                              <Image url="file:/C:/Users/VIKAS/Documents/NetBeansProjects/BusterBox/src/Resources/icons8_Filled_Circle_20px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#min" prefHeight="31.0" prefWidth="28.0" style="-fx-background-radius: 2000;" text=" ">
+                     <graphic>
+                        <ImageView>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <DropShadow color="#727272" spread="0.2" />
+                           </effect>
+                           <image>
+                              <Image url="file:/C:/Users/VIKAS/Documents/NetBeansProjects/BusterBox/src/Resources/icons8_Filled_Circle_20px_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#max" style="-fx-background-radius: 2000;" text=" ">
+                     <graphic>
+                        <ImageView>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <DropShadow color="#727272" spread="0.2" />
+                           </effect>
+                           <image>
+                              <Image url="@../Resources/icons8_Filled_Circle_20px_4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <bottom>
+      <BorderPane prefHeight="55.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <right>
+            <JFXButton prefHeight="26.0" prefWidth="155.0" text="remove user" textFill="#515151" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </bottom>
+</BorderPane>
